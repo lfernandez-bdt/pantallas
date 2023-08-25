@@ -1,0 +1,32 @@
+.bodyInput{        
+    width: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: .25rem 1rem;
+}
+
+.bodyInput span{
+    font-size: .5rem;
+    margin: .25rem 0;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.bodyInput i{
+    
+}
+
+.bodyInput input{
+    width: 100%;
+    padding: .5rem;
+    border-radius: .25rem;
+    border: 1px solid gray;
+    font-size: .75rem;
+    text-align: center;
+}

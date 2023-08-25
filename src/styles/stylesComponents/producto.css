@@ -1,0 +1,149 @@
+.bodyProduct{
+    width: 45%;
+    border-radius: .5rem;
+    margin: 1rem;
+    box-shadow: 1px 6px 10px 0px #AFAFAF;
+    letter-spacing: .05rem;
+}
+
+.bodyProduct header{
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: space-around;
+    border-radius: .5rem .5rem 0 0;
+    background-color: #0F0F0F;
+}
+
+.headerBlue header{
+    background-color: #005b9f !important;
+}
+
+.headerRed header{
+    background-color: #e9a842 !important;
+}
+
+.headerGreen header{
+    background-color: #85a511 !important;
+}
+
+.bodyProduct header div{
+    flex: 1 1;
+    color: white;
+    font-size: 1rem;
+}
+
+.bodyProduct header div:first-child{
+    text-align: left;
+}
+
+.bodyProduct header div:last-child{
+    text-align: right;
+}
+
+.bodyProduct section{
+    padding: .5rem 1rem;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 0 0 .5rem .5rem;
+    background-color: #F0F0F0;
+}
+
+.bodyProduct section div.firstColumnProduct, .bodyProduct section div.lastColumnProduct{
+    flex: 1 1;
+    color: black;
+    font-size: 1rem;
+}
+
+.bodyProduct section div.firstColumnProduct{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bodyProduct section div.firstColumnProduct div.dataProduct, .bodyProduct section div.firstColumnProduct div.buttonProduct{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.bodyProduct section div.firstColumnProduct div.dataProduct{
+    flex: 2;
+}
+
+.bodyProduct section div.firstColumnProduct div.dataProduct .valueProduct{
+    font-size: 0.75rem;
+}
+
+.bodyProduct section div.firstColumnProduct div.dataProduct .moneyProduct{
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-top: .5rem;
+}
+
+.bodyProduct section div.firstColumnProduct div.buttonProduct{
+    flex: 1;
+}
+
+.bodyProduct section div.firstColumnProduct div.buttonProduct button{
+    margin: .75rem 0 0 0;
+    padding: .5rem 1rem;
+    border-radius: 2rem;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 1.25rem;
+    background: white;
+    color: black;
+    width: auto;
+    display: flex;
+}
+
+.bodyProduct section div.firstColumnProduct div.buttonProduct button span{
+    margin-left: .75rem;
+}
+
+.bodyProduct section div.lastColumnProduct{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+.bodyProduct section div.lastColumnProduct span.itemProduct, .bodyProduct section div.lastColumnProduct button.itemProduct{
+    margin: .25rem 0;
+    font-size: 0.8rem;
+}
+
+.bodyProduct section div.lastColumnProduct button.itemProduct{
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: black;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: initial;
+    padding: .25rem 0;
+    justify-content: flex-end;
+}
+
+.bodyProduct section div.lastColumnProduct button.itemProduct:first-child{
+    margin-top: 1rem;
+}
+
+.bodyProduct section div.lastColumnProduct button.itemProduct:last-child{
+    margin-top: 1rem;
+}
+
+.bodyProduct section div.lastColumnProduct button.itemProduct span{
+    text-decoration: underline;
+    margin-left: .5rem;
+}
+
+@media (max-width: 1300px) {
+    .bodyProduct{
+        width: 100%;
+    }
+}

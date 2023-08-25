@@ -1,0 +1,74 @@
+.dataTableContainer {
+    width: 100%;
+    padding: 20px 30px 20px 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    -webkit-box-shadow: 1px 5px 30px -19px rgba(0, 0, 0, 0.68);
+    -moz-box-shadow: 1px 5px 30px -19px rgba(0, 0, 0, 0.68);
+    box-shadow: 1px 5px 30px -19px rgba(0, 0, 0, 0.68);
+    border-radius: 5px 5px 5px 5px ;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border: 0px solid #000000;
+    overflow: hidden;
+}
+
+table td,
+table th {
+    padding: 3px 0px;
+}
+
+table tbody td {
+    font-size: 13px;
+    padding: 10px 0px;
+
+}
+
+table thead tr {
+    background: #e5e4e4;
+
+}
+
+table tr {
+    background: #eeeeee;
+
+}
+
+table tbody tr:nth-child(even) {
+    background: #fbfbfb;
+}
+
+table thead th {
+    font-size: 15px;
+    font-weight: bold;
+    color: #000;
+
+}
+
+table thead th:first-child {
+    border-radius: 5px 0px 0px 0px;
+}
+
+table thead th:last-child {
+    border-radius: 0px 5px 0px 0px;
+}
+
+.footerTable {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 10px;
+
+}
+
+.controlTable {
+    background-color: #fff;
+    color: #000;
+    height: 30px;
+    width: 30px;
+    
+}

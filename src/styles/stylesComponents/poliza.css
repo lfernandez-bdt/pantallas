@@ -1,0 +1,163 @@
+.bodyPoliza{
+    width: 100%;
+    border-radius: .5rem;
+    box-shadow: 1px 6px 10px 0px #AFAFAF;
+    letter-spacing: .05rem;
+}
+
+.bodyPoliza header{
+    display: flex;
+    padding: .5rem 1.25rem;
+    background: black;
+    color: white;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: .5rem .5rem 0 0;
+}
+
+.bodyPoliza section article{
+    padding: 1rem;
+}
+
+.bodyPoliza section button{
+    background: none;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.bodyPoliza section article:nth-child(even){
+    background-color: gray;
+}
+
+.bodyPoliza section article:last-child{
+    border-radius: 0 0 .5rem .5rem;
+}
+
+.bodyPoliza section article div.lineButton{
+    display: flex;
+    justify-content: end;
+    margin-top: 1rem;
+}
+
+.bodyPoliza section article.infoPoliza div.lineButton{
+    margin-top: 0;
+}
+
+/*Informacion*/
+
+.bodyPoliza section article div.detalle{
+    display: flex;
+}
+
+.bodyPoliza section article div.detalle div.columnPoliza, .bodyPoliza section article div.detalle div.columnParticipantes{
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    flex: 1.5;
+}
+.bodyPoliza section article div.detalle div.columnPoliza span{
+    display: block;
+    font-size: .75rem;
+    text-align: left;
+}
+
+.bodyPoliza section article div.detalle div.columnPoliza span.monto{
+    font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: .75rem;
+}
+
+.bodyPoliza section article div.detalle div.columnPoliza button{
+    margin-bottom: .75rem;
+}
+
+.bodyPoliza section article div.detalle div.columnPoliza div{
+    flex: 1;
+    flex-direction: row;
+    display: flex;
+}
+
+.bodyPoliza section article div.detalle div.columnPoliza div div{
+    flex: 1;
+    flex-direction: column;
+    display: flex;
+    padding: .5rem 0 0;
+}
+
+.bodyPoliza section article div.detalle div.columnParticipantes{
+    flex-direction: row;
+    flex: 1;
+}
+
+.bodyPoliza section article div.detalle div.columnParticipantes div.columnIcon, .bodyPoliza section article div.detalle div.columnParticipantes div.columnInfo{
+    flex-direction: row;
+    display: flex;
+}
+
+.bodyPoliza section article div.detalle div.columnParticipantes div.columnIcon{
+    flex: 1;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bodyPoliza section article div.detalle div.columnParticipantes div.columnIcon span{
+    display: block;
+    font-size: .75rem;
+    text-align: center;
+}
+
+.bodyPoliza section article div.detalle div.columnParticipantes div.columnInfo{
+    flex: 2;
+    border-left: 1px solid black;
+    display: flex;
+    flex-direction: inherit;
+    justify-content: center;
+    align-items: center;
+}
+
+.bodyPoliza section article div.detalle div.columnParticipantes div.columnInfo span{
+    display: block;
+    font-size: .75rem;
+    text-align: left;
+    margin-bottom: 0.25rem;
+}
+
+/*Detalle*/
+
+.bodyPoliza section article div.detalle div.detalleIcon{
+    display: flex;
+    flex: 0.75;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bodyPoliza section article div.detalle div.detalleIcon span{
+    display: flex;
+    font-size: .75rem;
+    flex-wrap: wrap;
+    width: 70%;
+    text-align: center;
+    flex-direction: column;
+}
+
+.bodyPoliza section article div.detalle div.detalleIcon i{
+    display: block;
+    font-size: 1.75rem;
+    text-align: center;
+}
+
+.bodyPoliza section article div.detalle div.detalleInfo{
+    display: flex;
+    flex: 5;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bodyPoliza section article div.detalle div.detalleInfo div.rowInfo{
+    display: flex;
+}

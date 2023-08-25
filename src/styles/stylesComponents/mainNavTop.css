@@ -1,0 +1,13 @@
+.containerNavMain{
+    padding-right: 0;
+}
+.linkText{
+    font-size: 10px;
+}
+.containerNavTop{
+    display: flex;
+    align-items: center;
+    align-content: flex-end;
+    flex-direction: row;
+    gap: 15px;
+}

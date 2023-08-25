@@ -1,0 +1,63 @@
+.cardPoliza {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 400px;
+    background-color: #fff;
+    -webkit-box-shadow: 1px 4px 10px -2px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 1px 4px 10px -2px rgba(0, 0, 0, 0.6);
+    box-shadow: 1px 4px 10px -2px rgba(0, 0, 0, 0.6);
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+    height: 130px;
+    align-items: flex-start;
+    font-size: 12px;
+}
+
+.headerCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    width: 100%;
+    background-color: rgb(60, 60, 188);
+    -webkit-border-radius: 10px 10px 0px 0px;
+    color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+.cardBody {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 90px;
+    padding: 15px;
+
+}
+
+.valorContainer {
+    height: 100%;
+    width: 50%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap:10px;
+}
+
+.fechasContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap:10px;
+    height: 100%;
+    width: 50%;
+}
+.fechaAndBox{
+    display: flex;
+}
