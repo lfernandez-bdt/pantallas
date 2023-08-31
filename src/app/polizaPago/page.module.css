@@ -1,0 +1,185 @@
+.main {
+    padding: 2%;
+    height: 100%;
+}
+
+.container {
+    width: 912px;
+height: 364px;
+margin-left: 116px;
+margin-top: 63px;
+border-radius: 8px;
+border-radius: 8px;
+background-color: #FFF;
+box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.20);
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+flex-shrink: 0;
+overflow: hidden;
+}
+
+.header{
+    width: 913px;
+height: 36px;
+padding: 0 15px 0 26px;
+background-color: #E9A842;
+color: white;
+    font-family: var(--font-sans);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+   
+}
+
+.header h2{
+   
+    display: flex;
+
+justify-content: flex-end;
+align-items: center;
+
+color: #FFF;
+font-family: 'Frutiger LT Std';
+font-size: 16px;
+font-style: normal;
+font-weight: 850;
+line-height: normal;
+}
+
+.branch{
+
+    color: #FFF;
+font-family: 'Frutiger LT Std';
+font-size: 14px;
+font-style: normal;
+font-weight: 850;
+line-height: normal;
+
+margin-right: 15px;
+}
+
+.policyContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.policyNumberContainer{
+
+    display: flex;
+    width: 95px;
+    height: 17px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.policy{
+
+color: #FFF;
+text-align: right;
+font-family: 'Frutiger LT Std';
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.number{
+    color: #FFF;
+font-family: 'Frutiger LT Std';
+font-size: 16px;
+font-style: normal;
+font-weight: 850;
+line-height: normal;
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 0 31px;
+height: 100%;
+
+}
+
+.sectionSubcontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 581px;
+    margin: 12px 0;
+}
+
+.imgContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgContainer p{
+    width: 120px;
+    color: #000;
+font-family: 'Frutiger LT Std';
+font-size: 14px;
+font-style: normal;
+font-weight: 850;
+line-height: normal;
+margin-left: 14.06px;
+
+}
+
+.text{
+    display: flex;
+width: 179px;
+height: 23px;
+flex-direction: column;
+justify-content: center;
+flex-shrink: 0;
+
+color: #000;
+font-family: Frutiger LT Std;
+font-size: 10px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+}
+
+.input{
+    display: flex;
+width: 178px;
+height: 39px;
+justify-content: space-between;
+align-items: center;
+align-content: center;
+flex-shrink: 0;
+flex-wrap: wrap;
+
+border-radius: 5px;
+border: 1px solid #D9D9D9;
+background: #FFF;
+
+
+}
+
+.input p{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 75%;
+color: #000;
+font-family: 'Frutiger LT Std';
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
