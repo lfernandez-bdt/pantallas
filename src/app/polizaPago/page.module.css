@@ -5,72 +5,66 @@
 
 .container {
     width: 912px;
-height: 364px;
-margin-left: 116px;
-margin-top: 63px;
-border-radius: 8px;
-border-radius: 8px;
-background-color: #FFF;
-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.20);
-display: flex;
-flex-direction: column;
-justify-content: flex-start;
-align-items: flex-start;
-flex-shrink: 0;
-overflow: hidden;
+    height: 364px;
+    margin-left: 116px;
+    margin-top: 63px;
+    border-radius: 8px;
+    background-color: #FFF;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.20);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-shrink: 0;
+    overflow: hidden;
 }
 
-.header{
+.header {
     width: 913px;
-height: 36px;
-padding: 0 15px 0 26px;
-background-color: #E9A842;
-color: white;
+    height: 36px;
+    padding: 0 15px 0 26px;
+    background-color: #E9A842;
+    color: white;
     font-family: var(--font-sans);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     flex-shrink: 0;
-   
+
 }
 
-.header h2{
-   
+.header h2 {
     display: flex;
-
-justify-content: flex-end;
-align-items: center;
-
-color: #FFF;
-font-family: 'Frutiger LT Std';
-font-size: 16px;
-font-style: normal;
-font-weight: 850;
-line-height: normal;
-}
-
-.branch{
-
+    justify-content: flex-end;
+    align-items: center;
     color: #FFF;
-font-family: 'Frutiger LT Std';
-font-size: 14px;
-font-style: normal;
-font-weight: 850;
-line-height: normal;
+    font-family: 'Frutiger LT Std';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 850;
+    line-height: normal;
 
-margin-right: 15px;
 }
 
-.policyContainer{
+.branch {
+    color: #FFF;
+    font-family: 'Frutiger LT Std';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 850;
+    line-height: normal;
+    margin-right: 15px;
+}
+
+.policyContainer {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.policyNumberContainer{
-
+.policyNumberContainer {
     display: flex;
     width: 95px;
     height: 17px;
@@ -79,37 +73,36 @@ margin-right: 15px;
     flex-shrink: 0;
 }
 
-.policy{
-
-color: #FFF;
-text-align: right;
-font-family: 'Frutiger LT Std';
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-}
-
-.number{
+.policy {
     color: #FFF;
-font-family: 'Frutiger LT Std';
-font-size: 16px;
-font-style: normal;
-font-weight: 850;
-line-height: normal;
+    text-align: right;
+    font-family: 'Frutiger LT Std';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
-.section{
+.number {
+    color: #FFF;
+    font-family: 'Frutiger LT Std';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 850;
+    line-height: normal;
+    padding-left: 1px;
+}
+
+.section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 0 0 0 31px;
-height: 100%;
-
+    height: 100%;
 }
 
-.sectionSubcontainer{
+.sectionSubcontainer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -118,68 +111,181 @@ height: 100%;
     margin: 12px 0;
 }
 
-.imgContainer{
+.imgContainer {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.imgContainer p{
+.imgContainer p {
     width: 120px;
     color: #000;
-font-family: 'Frutiger LT Std';
-font-size: 14px;
-font-style: normal;
-font-weight: 850;
-line-height: normal;
-margin-left: 14.06px;
-
+    font-family: 'Frutiger LT Std';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 850;
+    line-height: normal;
+    margin-left: 14.06px;
 }
 
-.text{
+.input {
     display: flex;
-width: 179px;
-height: 23px;
-flex-direction: column;
-justify-content: center;
-flex-shrink: 0;
-
-color: #000;
-font-family: Frutiger LT Std;
-font-size: 10px;
-font-style: normal;
-font-weight: 300;
-line-height: normal;
+    width: 178px;
+    height: 39px;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    border: 1px solid #D9D9D9;
+    background: #FFF;
 }
 
-.input{
+.input p {
     display: flex;
-width: 178px;
-height: 39px;
-justify-content: space-between;
-align-items: center;
-align-content: center;
-flex-shrink: 0;
-flex-wrap: wrap;
-
-border-radius: 5px;
-border: 1px solid #D9D9D9;
-background: #FFF;
-
-
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    color: #000;
+    font-family: 'Frutiger LT Std';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
-.input p{
-display: flex;
-justify-content: center;
-align-items: center;
-width: 75%;
-color: #000;
-font-family: 'Frutiger LT Std';
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+.text {
+    display: flex;
+    width: 179px;
+    height: 23px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+
+    color: #000;
+    font-family: Frutiger LT Std;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
 }
 
+.line,
+.bottomTextFirst,
+.bottomTextSecond,
+.bottomTextContainer {
+    display: none;
+}
+
+
+@media only screen and (max-width:700px) {
+    .main {
+        height: 100%;
+    }
+
+    .container {
+        width: 328px;
+        height: 596px;
+        margin-left: 16px;
+        border-radius: 10px;
+    }
+
+    .header {
+        width: 328px;
+        height: 36px;
+        padding: 0 15px 0 26px;
+    }
+
+    .branch {
+        display: none;
+    }
+
+
+    .header h2 {
+        font-size: 14px;
+    }
+
+    .policyNumberContainer {
+        width: 58px;
+    }
+
+    .policy {
+        font-size: 12px;
+    }
+
+    .number {
+        font-size: 12px;
+    }
+
+    .section {
+        padding: 0px 0 0 23px;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .sectionSubcontainer {
+        width: 300px;
+        margin: 8px 0;
+        flex-wrap: wrap;
+        height: 80px;
+    }
+
+    .imgContainer p {
+        width: 120px;
+        color: #000;
+        font-family: 'Frutiger LT Std';
+        font-size: 14px;
+        margin-left: 7px;
+    }
+
+    .text {
+        width: 115px;
+    }
+
+    .line {
+        display: flex;
+        width: 303px;
+        height: 0.5px;
+        background-color: #000;
+        position: relative;
+        left: -10px;
+        top: 0px
+    }
+
+    .bottomTextFirst {
+        display: flex;
+        text-align: left;
+        width: 282px;
+        color: #000;
+        font-family: 'Frutiger LT Std';
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: 9px 0px 13px 0px;
+    }
+
+    .bottomTextContainer {
+        width: 274px;
+        height: 105px;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+
+    .bottomTextSecond {
+        width: 274px;
+        display: flex;
+        color: #000;
+        font-family: 'Frutiger LT Std';
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1;
+    }
+}
