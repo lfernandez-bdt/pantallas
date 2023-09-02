@@ -3,9 +3,15 @@ import { useRouter } from 'next/navigation';
 import styles from './page.module.css';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import ModalDark from '@/components/ModalDark';
+import Confirm from '@/components/Confirm';
+import { FaCalendar } from 'react-icons/fa';
+import PaymentDay from './modals/PaymentDay';
 
 export default function PolizaPago() {
   const router = useRouter();
+
+  const [paymentDayModal, setPaymentDayModal] = useState(false)
 
   useEffect(() => {}, []);
 
@@ -38,7 +44,7 @@ export default function PolizaPago() {
               </div>
               <div className={styles.input}>
                 <p>Día 01 del mes</p>
-                <Image src='/pencil.svg' width={36} height={36} alt='Pencil' />
+                <Image src='/pencil.svg' width={36} height={36} alt='Pencil' onClick={()=>setPaymentDayModal(true)}/>
               </div>
               <div className={styles.text}>
                 Recibirás un email confirmando tu solicitud en los próximos 15
@@ -125,6 +131,7 @@ export default function PolizaPago() {
             </div>
           </section>
         </div>
+        {paymentDayModal && <PaymentDay setPaymentDayModal={setPaymentDayModal}/>}
       </main>
     </>
   );

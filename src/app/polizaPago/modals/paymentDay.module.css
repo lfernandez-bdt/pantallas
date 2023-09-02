@@ -1,0 +1,75 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 330px;
+    height: 105px;
+    margin-bottom: 22.5px;
+}
+
+.calendar {
+    width: 36px;
+    height: 36px;
+    color: #000;
+}
+
+.checkIcon {
+    width: 20px;
+    height: 20px;
+    color: #ffffff;
+}
+
+.checkContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: violet;
+    margin-bottom: 15px;
+}
+
+.title {
+    color: #000;
+    font-family: 'Frutiger LT Std';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 16px 0 24px 0;
+}
+
+.text {
+    color: #000;
+    font-family: 'Frutiger LT Std';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 2px 29px 0px 0px;
+    width: 138px;
+    height: 20px;
+}
+
+.check {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    padding: 4px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    border: 1px solid var(--others-davys-grey, #5a5a5a);
+    background: var(--others-white, #fff);
+}
+
+.checkActive {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    padding: 4px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    background: #0079c2;
+}
