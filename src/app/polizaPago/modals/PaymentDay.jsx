@@ -29,7 +29,8 @@ export default function PaymentDay({ setPaymentDayModal }) {
       <div className={styles.container}>
         <Icon className={styles.calendar} type={'calendar'} />
         <p className={styles.title}>
-          Elige tu fecha de pago para la <strong>Póliza 24501</strong>:
+          Elige tu fecha de pago para la{' '}
+          <strong className={styles.strong}>Póliza 24501</strong>:
         </p>
         <div className={styles.checkContainer}>
           <p className={styles.text}>Día 01 del mes</p>

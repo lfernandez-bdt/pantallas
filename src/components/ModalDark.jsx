@@ -25,9 +25,9 @@ export default function ModalDark({
           <div className='contentModalDark'>{children}</div>
 
           <div className='buttonsContainerModalDark'>
-            <button className='btnModalDark ' onClick={onClickLeft}>
+            <div className='btnModalDark' onClick={onClickLeft}>
               {titleLeft}
-            </button>
+            </div>
             <button
               className={confirmBtn ? 'confirmBtnModalDark' : 'btnModalDark'}
               onClick={onClickRight}

@@ -25,7 +25,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: violet;
     margin-bottom: 15px;
 }
 
@@ -37,6 +36,15 @@
     font-weight: 400;
     line-height: normal;
     margin: 16px 0 24px 0;
+}
+
+.strong{
+    color: #000;
+font-family: 'Frutiger LT Std';
+font-size: 14px;
+font-style: normal;
+font-weight: 850;
+line-height: normal;
 }
 
 .text {
@@ -72,4 +80,10 @@
     align-items: center;
     border-radius: 3px;
     background: #0079c2;
+}
+
+@media only screen and (max-width:700px) {
+.title{
+    width: 230px;
+}
 }
