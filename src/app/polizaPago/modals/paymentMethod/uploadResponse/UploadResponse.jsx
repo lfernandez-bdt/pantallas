@@ -24,11 +24,15 @@ export default function UploadResponse({
         </p>
         <div className={styles.fileContainer}>
           <div className={styles.file}></div>
-          <Icon className={styles.cross} type={'cross'} />
+          <div className={styles.crossContainer}>
+            <Icon className={styles.cross} type={'cross'} />
+          </div>
         </div>
         <div className={styles.fileContainer}>
           <div className={styles.file}></div>
-          <Icon className={styles.cross} type={'cross'} />
+          <div className={styles.crossContainer}>
+            <Icon className={styles.cross} type={'cross'} />
+          </div>
         </div>
       </div>
     </ModalDark>
