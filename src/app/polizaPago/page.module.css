@@ -179,8 +179,21 @@
     display: none;
 }
 
+.icon {
+    width: 24px;
+    height: 24px;
+    color: #000;
+}
+
+.iconPencil {
+    width: 24px;
+    height: 24px;
+    color: #000;
+    margin-right: 4px;
+}
 
 @media only screen and (max-width:700px) {
+
     .main {
         height: 100%;
     }
@@ -251,7 +264,7 @@
         background-color: #000;
         position: relative;
         left: -10px;
-        top: 0px
+        top: 10px
     }
 
     .bottomTextFirst {
@@ -264,12 +277,12 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        margin: 9px 0px 13px 0px;
+        margin: 20px 0px 13px 0px;
     }
 
     .bottomTextContainer {
         width: 274px;
-        height: 105px;
+        height: 90px;
         flex-shrink: 0;
         display: flex;
         flex-direction: column;

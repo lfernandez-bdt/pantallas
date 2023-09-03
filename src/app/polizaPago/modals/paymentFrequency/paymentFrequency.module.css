@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: flex-start;
     width: 330px;
-    height: 105px;
+    height: 160px;
     margin-bottom: 22.5px;
 }
 
@@ -38,13 +38,14 @@
     margin: 16px 0 10px 0;
 }
 
-.strong{
+.strong {
     color: #000;
-font-family: 'Frutiger LT Std';
-font-size: 14px;
-font-style: normal;
-font-weight: 850;
-line-height: normal;
+    font-family: 'Frutiger LT Std';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 850;
+    line-height: normal;
+    white-space: pre-wrap
 }
 
 .text {
@@ -83,7 +84,12 @@ line-height: normal;
 }
 
 @media only screen and (max-width:700px) {
-.title{
-    width: 230px;
-}
+
+    .title {
+        width: 230px;
+    }
+
+    .container {
+        height: 200px;
+    }
 }

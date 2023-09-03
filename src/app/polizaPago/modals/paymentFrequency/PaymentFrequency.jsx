@@ -37,10 +37,10 @@ export default function PaymentFrequency({
       confirmBtn={true}
     >
       <div className={styles.container}>
-        <Icon className={styles.calendar} type={'calendar'} />
+        <Icon className={styles.calendar} type={'biCalendar'} />
         <p className={styles.title}>
           Elige tu frecuencia de pago para la
-          <strong className={styles.strong}>Póliza 24501</strong>:
+          <strong className={styles.strong}> Póliza 24501</strong>:
         </p>
 
         <div className={styles.checkContainer}>

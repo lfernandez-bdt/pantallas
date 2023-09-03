@@ -29,7 +29,7 @@
   padding: 10px;
   box-sizing: border-box;
   width: 400px;
-  height: 280px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -51,7 +51,6 @@
   padding: 4px 0 0 24px;
 }
 
-
 .buttonsContainerModalDark {
   display: flex;
   justify-content: space-between;
@@ -60,7 +59,7 @@
   margin: 19px 0 19px 0;
 }
 
-.buttonsContainerDisplayNone{
+.buttonsContainerDisplayNone {
   display: none;
 }
 
@@ -83,12 +82,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  transition: all 0.25s ease;
-}
 
-.btnModalDark:hover {
-  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
-  transform: translate(-4px, 4px);
 }
 
 .confirmBtnModalDark {
@@ -111,24 +105,10 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  transition: all 0.25s ease;
 }
-
-.confirmBtnModalDark:hover {
-  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
-  transform: translate(-4px, 4px);
-}
-
-.confirmBtn:hover {
-  box-shadow: none;
-  transform: none;
-  background: whitesmoke;
-  color: #000;
-  border: 1px solid black;
-}
-
 
 @media only screen and (max-width:700px) {
+
   .modalDark {
     width: 332px;
   }

@@ -24,6 +24,7 @@ import {
   FaRegFile,
   FaCalendar,
   FaSearch,
+  FaRegCreditCard,
 } from 'react-icons/fa';
 import {
   BiLock,
@@ -33,7 +34,11 @@ import {
   BiSortAlt2,
   BiArchiveIn,
   BiCheck,
+  BiCheckSquare,
+  BiDownload,
+  BiCalendar,
 } from 'react-icons/bi';
+import { BsPaperclip } from 'react-icons/bs';
 
 export function Icon({ className, dataTestId, onClick, style, type }) {
   const icons = (type) => {
@@ -48,7 +53,7 @@ export function Icon({ className, dataTestId, onClick, style, type }) {
         return <FaArrowLeft />;
       }
       case 'edit': {
-        return <BiPencil />;
+        return <BiPencil className={className} />;
       }
       case 'file': {
         return <FaRegFileAlt />;
@@ -63,7 +68,7 @@ export function Icon({ className, dataTestId, onClick, style, type }) {
         return <FaChevronDown />;
       }
       case 'cross': {
-        return <FaTimes />;
+        return <FaTimes className={className} />;
       }
       case 'key': {
         return <FaKey />;
@@ -102,7 +107,7 @@ export function Icon({ className, dataTestId, onClick, style, type }) {
         return <FaHeart />;
       }
       case 'BiDollarCircle': {
-        return <BiDollarCircle />;
+        return <BiDollarCircle className={className} />;
       }
       case 'BiSortAlt2': {
         return <BiSortAlt2 />;
@@ -114,13 +119,28 @@ export function Icon({ className, dataTestId, onClick, style, type }) {
         return <FaChartLine />;
       }
       case 'calendar': {
-        return <FaCalendar />;
+        return <FaCalendar className={className} />;
       }
       case 'search': {
         return <FaSearch />;
       }
       case 'check': {
-        return <BiCheck />;
+        return <BiCheck className={className} />;
+      }
+      case 'checkbox': {
+        return <BiCheckSquare className={className} />;
+      }
+      case 'clip': {
+        return <BsPaperclip className={className} />;
+      }
+      case 'download': {
+        return <BiDownload className={className} />;
+      }
+      case 'biCalendar': {
+        return <BiCalendar className={className} />;
+      }
+      case 'creditCard': {
+        return <FaRegCreditCard className={className} />;
       }
       default: {
         return <BiQuestionMark />;

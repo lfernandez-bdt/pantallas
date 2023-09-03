@@ -2,13 +2,14 @@
 import { useRouter } from 'next/navigation';
 import styles from './page.module.css';
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
-import ModalDark from '@/components/ModalDark';
-import Confirm from '@/components/Confirm';
-import { FaCalendar } from 'react-icons/fa';
 import PaymentDay from './modals/paymentDay/PaymentDay';
 import PaymentFrequency from './modals/paymentFrequency/PaymentFrequency';
 import ConfirmMessageModal from './modals/confirmMessage/ConfirmMessageModal';
+import PaymentMethod from './modals/paymentMethod/PaymentMethod';
+import PacModal from './modals/paymentMethod/pacModal/PacModal';
+import PatModal from './modals/paymentMethod/patModal/PatModal';
+import UploadResponse from './modals/paymentMethod/uploadResponse/UploadResponse';
+import { Icon } from '@/components/Icon';
 
 export default function PolizaPago() {
   const router = useRouter();
@@ -16,10 +17,12 @@ export default function PolizaPago() {
   const [paymentDayModal, setPaymentDayModal] = useState(false);
   const [paymentFrequencyModal, setPaymentFrequencyModal] = useState(false);
   const [confirmModal, setConfirmModal] = useState(false);
+  const [paymentMethodModal, setPaymentMethodModal] = useState(false);
+  const [pacModal, setPacModal] = useState(false);
+  const [patModal, setPatModal] = useState(false);
+  const [uploadResponseModal, setUploadResponseModal] = useState(false);
 
   useEffect(() => {}, []);
-
-  const number = 24501;
 
   return (
     <>
@@ -31,28 +34,22 @@ export default function PolizaPago() {
               <div className={styles.branch}>APV Ohio Life</div>
 
               <div className={styles.policy}>
-                Póliza <span className={styles.number}>{number}</span>
+                Póliza <span className={styles.number}>24501</span>
               </div>
             </div>
           </div>
           <section className={styles.section}>
             <div className={styles.sectionSubcontainer}>
               <div className={styles.imgContainer}>
-                <Image
-                  src='/calendar_month.svg'
-                  width={24}
-                  height={24}
-                  alt='Calendar'
-                />
+                <Icon className={styles.icon} type={'biCalendar'} />
                 <p>Día de Pago</p>
               </div>
               <div className={styles.input}>
                 <p>Día 01 del mes</p>
-                <Image
-                  src='/pencil.svg'
-                  width={36}
-                  height={36}
-                  alt='Pencil'
+
+                <Icon
+                  className={styles.iconPencil}
+                  type={'edit'}
                   onClick={() => setPaymentDayModal(true)}
                 />
               </div>
@@ -64,21 +61,15 @@ export default function PolizaPago() {
 
             <div className={styles.sectionSubcontainer}>
               <div className={styles.imgContainer}>
-                <Image
-                  src='/calendar_month.svg'
-                  width={24}
-                  height={24}
-                  alt='Calendar'
-                />
+                <Icon className={styles.icon} type={'biCalendar'} />
                 <p>Frecuencia de Pago</p>
               </div>
               <div className={styles.input}>
                 <p>mensual</p>
-                <Image
-                  src='/pencil.svg'
-                  width={36}
-                  height={36}
-                  alt='Pencil'
+
+                <Icon
+                  className={styles.iconPencil}
+                  type={'edit'}
                   onClick={() => setPaymentFrequencyModal(true)}
                 />
               </div>
@@ -90,17 +81,16 @@ export default function PolizaPago() {
 
             <div className={styles.sectionSubcontainer}>
               <div className={styles.imgContainer}>
-                <Image
-                  src='/card.svg'
-                  width={20}
-                  height={16}
-                  alt='Credit Card'
-                />
+                <Icon className={styles.icon} type={'creditCard'} />
                 <p>Medio de Pago</p>
               </div>
               <div className={styles.input}>
                 <p>PAC</p>
-                <Image src='/pencil.svg' width={36} height={36} alt='Pencil' />
+                <Icon
+                  className={styles.iconPencil}
+                  type={'edit'}
+                  onClick={() => setPaymentMethodModal(true)}
+                />
               </div>
               <div className={styles.text}>
                 Recibirás un email confirmando tu solicitud en los próximos 15
@@ -110,17 +100,16 @@ export default function PolizaPago() {
 
             <div className={styles.sectionSubcontainer}>
               <div className={styles.imgContainer}>
-                <Image
-                  src='/cash.svg'
-                  width={18}
-                  height={18}
-                  alt='Money symbol'
-                />
+                <Icon className={styles.icon} type={'BiDollarCircle'} />
                 <p>Prima Pactada</p>
               </div>
               <div className={styles.input}>
                 <p>UF 3.2</p>
-                <Image src='/pencil.svg' width={36} height={36} alt='Pencil' />
+                <Icon
+                  className={styles.iconPencil}
+                  type={'edit'}
+                  onClick={() => setConfirmModal(true)}
+                />
               </div>
               <div className={styles.text}>
                 Recibirás un email confirmando tu solicitud en los próximos 15
@@ -148,7 +137,10 @@ export default function PolizaPago() {
           </section>
         </div>
         {paymentDayModal && (
-          <PaymentDay setPaymentDayModal={setPaymentDayModal}  setConfirmModal={setConfirmModal}/>
+          <PaymentDay
+            setPaymentDayModal={setPaymentDayModal}
+            setConfirmModal={setConfirmModal}
+          />
         )}
         {paymentFrequencyModal && (
           <PaymentFrequency
@@ -156,7 +148,40 @@ export default function PolizaPago() {
             setConfirmModal={setConfirmModal}
           />
         )}
-        {confirmModal && <ConfirmMessageModal  setConfirmModal={setConfirmModal}/>}
+        {confirmModal && (
+          <ConfirmMessageModal setConfirmModal={setConfirmModal} />
+        )}
+        {paymentMethodModal && (
+          <PaymentMethod
+            setPaymentMethod={setPaymentMethodModal}
+            pacModal={pacModal}
+            setPacModal={setPacModal}
+            patModal={patModal}
+            setPatModal={setPatModal}
+            uploadResponseModal={uploadResponseModal}
+            setUploadResponseModal={setUploadResponseModal}
+          />
+        )}
+        {pacModal && (
+          <PacModal
+            setPacModal={setPacModal}
+            setUploadResponseModal={setUploadResponseModal}
+            uploadResponseModal={uploadResponseModal}
+          />
+        )}
+        {patModal && (
+          <PatModal
+            setPatModal={setPatModal}
+            setUploadResponseModal={setUploadResponseModal}
+            uploadResponseModal={uploadResponseModal}
+          />
+        )}
+        {uploadResponseModal && (
+          <UploadResponse
+            setUploadResponseModal={setUploadResponseModal}
+            setConfirmModal={setConfirmModal}
+          />
+        )}
       </main>
     </>
   );

@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: flex-start;
     width: 330px;
-    height: 105px;
+    height: 140px;
     margin-bottom: 22.5px;
 }
 
@@ -38,13 +38,13 @@
     margin: 16px 0 24px 0;
 }
 
-.strong{
+.strong {
     color: #000;
-font-family: 'Frutiger LT Std';
-font-size: 14px;
-font-style: normal;
-font-weight: 850;
-line-height: normal;
+    font-family: 'Frutiger LT Std';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 850;
+    line-height: normal;
 }
 
 .text {
@@ -63,7 +63,7 @@ line-height: normal;
     display: flex;
     width: 20px;
     height: 20px;
-
+    padding: 4px;
     justify-content: center;
     align-items: center;
     border-radius: 3px;
@@ -83,7 +83,12 @@ line-height: normal;
 }
 
 @media only screen and (max-width:700px) {
-.title{
-    width: 230px;
-}
+
+    .title {
+        width: 230px;
+    }
+
+    .container {
+        height: 170px;
+    }
 }
