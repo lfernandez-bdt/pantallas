@@ -6,12 +6,16 @@ import Image from 'next/image';
 import ModalDark from '@/components/ModalDark';
 import Confirm from '@/components/Confirm';
 import { FaCalendar } from 'react-icons/fa';
-import PaymentDay from './modals/PaymentDay';
+import PaymentDay from './modals/paymentDay/PaymentDay';
+import PaymentFrequency from './modals/paymentFrequency/PaymentFrequency';
+import ConfirmMessageModal from './modals/confirmMessage/ConfirmMessageModal';
 
 export default function PolizaPago() {
   const router = useRouter();
 
-  const [paymentDayModal, setPaymentDayModal] = useState(false)
+  const [paymentDayModal, setPaymentDayModal] = useState(false);
+  const [paymentFrequencyModal, setPaymentFrequencyModal] = useState(false);
+  const [confirmModal, setConfirmModal] = useState(false);
 
   useEffect(() => {}, []);
 
@@ -44,7 +48,13 @@ export default function PolizaPago() {
               </div>
               <div className={styles.input}>
                 <p>Día 01 del mes</p>
-                <Image src='/pencil.svg' width={36} height={36} alt='Pencil' onClick={()=>setPaymentDayModal(true)}/>
+                <Image
+                  src='/pencil.svg'
+                  width={36}
+                  height={36}
+                  alt='Pencil'
+                  onClick={() => setPaymentDayModal(true)}
+                />
               </div>
               <div className={styles.text}>
                 Recibirás un email confirmando tu solicitud en los próximos 15
@@ -64,7 +74,13 @@ export default function PolizaPago() {
               </div>
               <div className={styles.input}>
                 <p>mensual</p>
-                <Image src='/pencil.svg' width={36} height={36} alt='Pencil' />
+                <Image
+                  src='/pencil.svg'
+                  width={36}
+                  height={36}
+                  alt='Pencil'
+                  onClick={() => setPaymentFrequencyModal(true)}
+                />
               </div>
               <div className={styles.text}>
                 Recibirás un email confirmando tu solicitud en los próximos 15
@@ -131,7 +147,16 @@ export default function PolizaPago() {
             </div>
           </section>
         </div>
-        {paymentDayModal && <PaymentDay setPaymentDayModal={setPaymentDayModal}/>}
+        {paymentDayModal && (
+          <PaymentDay setPaymentDayModal={setPaymentDayModal}  setConfirmModal={setConfirmModal}/>
+        )}
+        {paymentFrequencyModal && (
+          <PaymentFrequency
+            setPaymentFrequencyModal={setPaymentFrequencyModal}
+            setConfirmModal={setConfirmModal}
+          />
+        )}
+        {confirmModal && <ConfirmMessageModal  setConfirmModal={setConfirmModal}/>}
       </main>
     </>
   );

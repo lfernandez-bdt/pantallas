@@ -25,7 +25,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 .title {
@@ -35,7 +35,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin: 16px 0 24px 0;
+    margin: 16px 0 10px 0;
 }
 
 .strong{

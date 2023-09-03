@@ -2,6 +2,7 @@ import '@/styles/stylesComponents/modalDark.css';
 import { Icon } from './Icon';
 
 export default function ModalDark({
+  buttons,
   onClose,
   onClickLeft,
   onClickRight,
@@ -24,7 +25,13 @@ export default function ModalDark({
           </div>
           <div className='contentModalDark'>{children}</div>
 
-          <div className='buttonsContainerModalDark'>
+          <div
+            className={
+              buttons
+                ? 'buttonsContainerModalDark'
+                : 'buttonsContainerDisplayNone'
+            }
+          >
             <div className='btnModalDark' onClick={onClickLeft}>
               {titleLeft}
             </div>

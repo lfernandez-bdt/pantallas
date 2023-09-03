@@ -60,6 +60,10 @@
   margin: 19px 0 19px 0;
 }
 
+.buttonsContainerDisplayNone{
+  display: none;
+}
+
 .btnModalDark {
   width: 128px;
   height: 36px;
@@ -135,6 +139,6 @@
 
   .buttonsContainerModalDark {
     width: 90%;
-    margin: 0px;
+    margin: 0 0 10px 0;
   }
 }

@@ -3,7 +3,7 @@ import styles from './paymentDay.module.css';
 import { useState } from 'react';
 import { Icon } from '@/components/Icon';
 
-export default function PaymentDay({ setPaymentDayModal }) {
+export default function PaymentDay({ setPaymentDayModal, setConfirmModal }) {
   const [checked, setChecked] = useState({ top: false, bottom: true });
 
   function onCancel() {
@@ -12,6 +12,7 @@ export default function PaymentDay({ setPaymentDayModal }) {
 
   function onConfirm() {
     setPaymentDayModal(false);
+    setConfirmModal(true);
   }
 
   const btnLeft = 'Cancelar';
@@ -19,6 +20,7 @@ export default function PaymentDay({ setPaymentDayModal }) {
 
   return (
     <ModalDark
+      buttons={true}
       onClose={setPaymentDayModal}
       onClickLeft={onCancel}
       onClickRight={onConfirm}
