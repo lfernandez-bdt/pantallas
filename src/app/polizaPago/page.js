@@ -24,6 +24,37 @@ export default function PolizaPago() {
 
   useEffect(() => {}, []);
 
+  const payments = [
+    {
+      id: 1,
+      icon: 'biCalendar',
+      title: 'Día de Pago',
+      subtitle: 'Día 01 del mes',
+      enter: () => setPaymentDayModal(true),
+    },
+    {
+      id: 2,
+      icon: 'biCalendar',
+      title: 'Frecuencia de Pago',
+      subtitle: 'mensual',
+      enter: () => setPaymentFrequencyModal(true),
+    },
+    {
+      id: 3,
+      icon: 'creditCard',
+      title: 'Medio de Pago',
+      subtitle: 'PAC',
+      enter: () => setPaymentMethodModal(true),
+    },
+    {
+      id: 4,
+      icon: 'BiDollarCircle',
+      title: 'Prima Pactada',
+      subtitle: 'UF 3.2',
+      enter: () => setConfirmModal(true),
+    },
+  ];
+
   return (
     <>
       <main className={styles.main}>
@@ -39,83 +70,29 @@ export default function PolizaPago() {
             </div>
           </div>
           <section className={styles.section}>
-            <div className={styles.sectionSubcontainer}>
-              <div className={styles.imgContainer}>
-                <Icon className={styles.icon} type={'biCalendar'} />
-                <p>Día de Pago</p>
-              </div>
-              <div className={styles.input}>
-                <p>Día 01 del mes</p>
+            {payments.map((el) => {
+              return (
+                <div key={el.id} className={styles.sectionSubcontainer}>
+                  <div className={styles.imgContainer}>
+                    <Icon className={styles.icon} type={el.icon} />
+                    <p>{el.title}</p>
+                  </div>
+                  <div className={styles.input}>
+                    <p>{el.subtitle}</p>
+                    <Icon
+                      className={styles.iconPencil}
+                      type={'edit'}
+                      onClick={el.enter}
+                    />
+                  </div>
+                  <div className={styles.text}>
+                    Recibirás un email confirmando tu solicitud en los próximos
+                    15 días.
+                  </div>
+                </div>
+              );
+            })}
 
-                <Icon
-                  className={styles.iconPencil}
-                  type={'edit'}
-                  onClick={() => setPaymentDayModal(true)}
-                />
-              </div>
-              <div className={styles.text}>
-                Recibirás un email confirmando tu solicitud en los próximos 15
-                días.
-              </div>
-            </div>
-
-            <div className={styles.sectionSubcontainer}>
-              <div className={styles.imgContainer}>
-                <Icon className={styles.icon} type={'biCalendar'} />
-                <p>Frecuencia de Pago</p>
-              </div>
-              <div className={styles.input}>
-                <p>mensual</p>
-
-                <Icon
-                  className={styles.iconPencil}
-                  type={'edit'}
-                  onClick={() => setPaymentFrequencyModal(true)}
-                />
-              </div>
-              <div className={styles.text}>
-                Recibirás un email confirmando tu solicitud en los próximos 15
-                días.
-              </div>
-            </div>
-
-            <div className={styles.sectionSubcontainer}>
-              <div className={styles.imgContainer}>
-                <Icon className={styles.icon} type={'creditCard'} />
-                <p>Medio de Pago</p>
-              </div>
-              <div className={styles.input}>
-                <p>PAC</p>
-                <Icon
-                  className={styles.iconPencil}
-                  type={'edit'}
-                  onClick={() => setPaymentMethodModal(true)}
-                />
-              </div>
-              <div className={styles.text}>
-                Recibirás un email confirmando tu solicitud en los próximos 15
-                días.
-              </div>
-            </div>
-
-            <div className={styles.sectionSubcontainer}>
-              <div className={styles.imgContainer}>
-                <Icon className={styles.icon} type={'BiDollarCircle'} />
-                <p>Prima Pactada</p>
-              </div>
-              <div className={styles.input}>
-                <p>UF 3.2</p>
-                <Icon
-                  className={styles.iconPencil}
-                  type={'edit'}
-                  onClick={() => setConfirmModal(true)}
-                />
-              </div>
-              <div className={styles.text}>
-                Recibirás un email confirmando tu solicitud en los próximos 15
-                días.
-              </div>
-            </div>
             <div className={styles.line}></div>
             <p className={styles.bottomTextFirst}>
               (*) Las cartolas de cada mes estarán disponibles a partir del dia
@@ -136,6 +113,7 @@ export default function PolizaPago() {
             </div>
           </section>
         </div>
+
         {paymentDayModal && (
           <PaymentDay
             setPaymentDayModal={setPaymentDayModal}
