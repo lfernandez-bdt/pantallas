@@ -3,6 +3,7 @@ import { useRouter } from "next/navigation"
 import styles from './page.module.css'
 import { useEffect, useState } from 'react'
 import Button from "@/components/Button"
+import Link from "next/link"
 
 export default function Home() {
   const router = useRouter()
@@ -22,6 +23,7 @@ export default function Home() {
           <div className={styles.containerItems}>
             <Button onclick={() => {router.push("/cartolas")}}>Cartolas</Button>
             <Button onclick={() => {router.push("/polizaPago")}}>Modificaciones de pago</Button>
+            <Link href="/solicitudes">Generar Solicitudes</Link>
           </div>
       </main>
     </>
