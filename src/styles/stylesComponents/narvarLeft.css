@@ -80,3 +80,13 @@
 .dropdown.show {
     display: block;
 }
+
+@media only screen and (max-width:700px) {
+
+.navContainer {
+    display: none;
+}
+.containerNavMainLeft {
+    display: none;
+}
+}
