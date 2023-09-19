@@ -1,5 +1,5 @@
 import * as React from "react"
-import '@/styles/stylesComponents/Input.css'
+import '@/styles/stylesComponents/FlexInput.css'
 import { BiCheckSquare, BiPencil, BiSearch, BiSquare } from "react-icons/bi"
 
 function Input({

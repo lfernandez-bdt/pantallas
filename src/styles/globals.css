@@ -24,7 +24,6 @@ body {
     color: rgb(var(--black));
     background-color: rgb(var(--primary-color));
     min-height: 100vh;
-    overflow: hidden;
 }
 
 a {
@@ -47,7 +46,7 @@ a {
 
 .containerPage {
     grid-area: 2 / 2 / 3 / 3;
-    overflow: hidden;
+    /* overflow: hidden; */
     background: white;
 }
 

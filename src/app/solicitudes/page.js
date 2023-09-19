@@ -1,8 +1,6 @@
-import { Input } from "@/components/Input";
 import styles from "./page.module.css";
 import Button from "@/components/Button";
 import Link from "next/link";
-
 
 export default function Solicitudes() {
     return (
